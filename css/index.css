@@ -1,0 +1,16 @@
+*{margin: 0;padding: 0;}
+body{
+	
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+}
+total{
+	text-align: center;
+}
+total h1{
+	color: dodgerblue;
+}
+total h3{
+	margin: 20px auto;
+}
