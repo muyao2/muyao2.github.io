@@ -3,15 +3,51 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>muyao homepage</title>
-		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/index.css" />
 	</head>
 	<body background="./img/gj1.jpg">
 		<total>
 			<h1>欢迎来到慕瑶的主页</h1>
-			<button type="button">简历</button>
-			<button type="button"><a href="https://muyaogithub.github.io/" target="_blank">作品</a></button>
-			<button type="button">证书</button>
-			
+			<div id="jianLi">
+				<span class="biaoTi">姓名：</span><span>慕瑶（化名）</span><br>
+				<span class="biaoTi">专业：</span><span>软件技术</span><br>
+				<span class="biaoTi">技能：</span>精通各种软件的<span style="color: red;">卸载</span>，熟悉各种<span style="color: red;">shutdown</span>命令<span></span><br>
+			</div>
+			<button type="button" onclick="jl()">简历</button>
+			<div id="zuoPing">
+				<button type="button"><a href="https://muyaogithub.github.io/" target="_blank">作品</a></button>
+			</div>
+
+			<div id="rongYu">
+				<img src="img/gj2.jpg" >
+			</div>
+			<button type="button" onclick="ry()">荣誉</button>
+
 		</total>
 	</body>
+	<script type="text/javascript">
+		var jlNum = 0, ryNum = 0;
+		function jl(){
+			jlNum++;
+			if(jlNum%2==0){
+				document.getElementById('jianLi').style.display='none';
+			}
+			else{
+				document.getElementById('jianLi').style.display='block';
+				ryNum = 0;
+				document.getElementById('rongYu').style.display='none';
+			}
+		}
+		function ry(){
+			ryNum++;
+			if(ryNum%2==0){
+				document.getElementById('rongYu').style.display='none';
+			}
+			else{
+				document.getElementById('rongYu').style.display='block';
+				jlNum = 0;
+				document.getElementById('jianLi').style.display='none';
+			}
+		}
+	</script>
 </html>
